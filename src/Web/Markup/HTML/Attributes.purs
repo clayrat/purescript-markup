@@ -1,6 +1,6 @@
-module Data.Markup.HTML.Attributes where
+module Web.Markup.HTML.Attributes where
 --------------------------------------------------------------------------------
-import Data.Markup (Prop (Attr))
+import Web.Markup (Prop (Attr))
 
 text :: forall e. String -> Prop e
 text = Attr "text"

@@ -1,7 +1,7 @@
-module Data.Markup.HTML.Event where
+module Web.Markup.HTML.Event where
 --------------------------------------------------------------------------------
 import Prelude
-import Data.Markup.Event
+import Web.Markup.Event
 import Data.Foreign.Class (readProp)
 import Control.Bind
 import Data.Either

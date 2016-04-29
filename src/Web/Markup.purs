@@ -1,4 +1,4 @@
-module Data.Markup
+module Web.Markup
   ( Markup (), Prop (..), Tag (), Namespace (), Attr (), Key (), EventName ()
   , tag, text, markup) where
 --------------------------------------------------------------------------------

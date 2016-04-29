@@ -1,8 +1,8 @@
 -- | Complete list of all HTML5 tags.
-module Data.Markup.HTML where
+module Web.Markup.HTML where
 --------------------------------------------------------------------------------
 import Data.Maybe (Maybe (Nothing))
-import Data.Markup (Prop (), Markup (), tag)
+import Web.Markup (Prop (), Markup (), tag)
 
 a :: forall e. Array (Prop e) -> Markup e -> Markup e
 a = tag "a" Nothing

@@ -1,7 +1,7 @@
-module Data.Markup.Event where
+module Web.Markup.Event where
 --------------------------------------------------------------------------------
 import Prelude
-import Data.Markup
+import Web.Markup
 import Data.Foreign (Foreign ())
 import Type.Proxy
 
