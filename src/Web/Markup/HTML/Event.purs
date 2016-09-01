@@ -1,10 +1,9 @@
 module Web.Markup.HTML.Event where
 --------------------------------------------------------------------------------
 import Prelude
-import Web.Markup.Event
+import Data.Either (either)
 import Data.Foreign.Class (readProp)
-import Control.Bind
-import Data.Either
+import Web.Markup.Event (class Event)
 
 -- | An element has been clicked.
 data Click = Click

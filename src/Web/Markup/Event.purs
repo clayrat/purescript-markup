@@ -1,9 +1,9 @@
 module Web.Markup.Event where
 --------------------------------------------------------------------------------
 import Prelude
-import Web.Markup
 import Data.Foreign (Foreign ())
-import Type.Proxy
+import Type.Proxy (Proxy(..))
+import Web.Markup (EventName, Prop(..))
 
 -- | Type of event associated with a payload that can be read from the foreign
 -- | event object passed by the browser.

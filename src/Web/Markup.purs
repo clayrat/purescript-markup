@@ -3,13 +3,12 @@ module Web.Markup
   , tag, text, markup) where
 --------------------------------------------------------------------------------
 import Prelude
-import Control.Alt
-import Control.Plus
-import Data.Foreign
-import Data.Maybe
-import Data.Monoid
-import Data.Coyoneda
-import Data.Foldable
+import Control.Plus (class Plus, class Alt, empty, alt)
+import Data.Coyoneda (Coyoneda, lowerCoyoneda, liftCoyoneda)
+import Data.Foldable (foldMap)
+import Data.Foreign (Foreign)
+import Data.Maybe (Maybe)
+import Data.Monoid (class Monoid)
 
 type Tag = String
 type Namespace = String
@@ -30,7 +29,7 @@ instance markupFunctor :: Functor Markup where
   map f (Markup ns) = Markup ((map <<< map) f ns)
 
 instance markupAlt :: Alt Markup where
-  alt (Markup ns) (Markup ms) = Markup (ns ++ ms)
+  alt (Markup ns) (Markup ms) = Markup (ns <> ms)
 
 instance markupPlus :: Plus Markup where
   empty = Markup empty
