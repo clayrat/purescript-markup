@@ -12,6 +12,20 @@ instance clickUnitEvent :: Event Unit Click where
   eventName _ _ = "click"
   eventPayload _ _ = unit
 
+-- | An element has been clicked and held.
+data MouseDown = MouseDown
+
+instance mouseDownUnitEvent :: Event Unit MouseDown where
+  eventName _ _ = "mousedown"
+  eventPayload _ _ = unit
+
+-- | An element has been released by mouse.
+data MouseUp = MouseUp
+
+instance mouseUpUnitEvent :: Event Unit MouseUp where
+  eventName _ _ = "mouseup"
+  eventPayload _ _ = unit
+
 -- | Text has been entered into an input field.
 data Input = Input
 
