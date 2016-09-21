@@ -19,6 +19,13 @@ instance mouseDownUnitEvent :: Event Unit MouseDown where
   eventName _ _ = "mousedown"
   eventPayload _ _ = unit
 
+-- | The muse pointer has moved over an element
+data MouseMove = MouseMove
+
+instance mouseMoveUnitEvent :: Event Unit MouseMove where
+  eventName _ _ = "mousemove"
+  eventPayload _ _ = unit
+
 -- | An element has been released by mouse.
 data MouseUp = MouseUp
 
