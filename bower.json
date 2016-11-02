@@ -11,11 +11,11 @@
     "output"
   ],
   "dependencies": {
-    "purescript-prelude": "^1.0.1",
-    "purescript-control": "^1.0.0",
-    "purescript-foreign": "^1.1.0",
-    "purescript-either": "^1.0.0",
+    "purescript-prelude": "^2.1.0",
+    "purescript-control": "^2.0.0",
+    "purescript-foreign": "^3.0.0",
+    "purescript-either": "^2.0.0",
     "purescript-proxy": "^1.0.0",
-    "purescript-free": "^1.2.0"
+    "purescript-free": "^3.0.0"
   }
 }

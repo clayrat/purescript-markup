@@ -1,6 +1,7 @@
 module Web.Markup.HTML.Event where
 --------------------------------------------------------------------------------
 import Prelude
+import Control.Monad.Except (runExcept)
 import Data.Either (either)
 import Data.Foreign.Class (readProp)
 import Web.Markup.Event (class Event)
@@ -38,11 +39,11 @@ data Input = Input
 
 instance inputStringEvent :: Event String Input where
   eventName _ _ = "input"
-  eventPayload _ = either (const "") id <<< (readProp "value" <=< readProp "target")
+  eventPayload _ = either (const "") id <<< runExcept <<< (readProp "value" <=< readProp "target")
 
 -- | A checkbox got checked or unchecked.
 data Checked = Checked
 
 instance checkedBooleanEvent :: Event Boolean Checked where
   eventName _ _ = "change"
-  eventPayload _ = either (const false) id <<< (readProp "checked" <=< readProp "target")
+  eventPayload _ = either (const false) id <<< runExcept <<< (readProp "checked" <=< readProp "target")
