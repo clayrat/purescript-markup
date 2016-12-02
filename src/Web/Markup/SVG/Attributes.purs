@@ -8,6 +8,12 @@ cx = Attr "cx"
 cy :: forall e. String -> Prop e
 cy = Attr "cy"
 
+d :: forall e. String -> Prop e
+d = Attr "d"
+
+dy :: forall e. String -> Prop e
+dy = Attr "dy"
+
 fill :: forall e. String -> Prop e
 fill = Attr "fill"
 
@@ -19,6 +25,9 @@ r = Attr "r"
 
 strokeWidth :: forall e. String -> Prop e
 strokeWidth = Attr "stroke-width"
+
+transform :: forall e. String -> Prop e
+transform = Attr "transform"
 
 width :: forall e. String -> Prop e
 width = Attr "width"
