@@ -95,14 +95,14 @@ tr x y = appendToPath $ "t" <> show x <> "," <> show y
 a :: Number -> Number -> Number -> Boolean -> Boolean -> Number -> Number -> Path -> Path
 a rx ry xrot largearc sweep x y = appendToPath $ "A" <> show rx <> "," <> show ry
                                               <> " " <> show xrot
-                                              <> " " <> if largearc then "1" else "0"
-                                              <> "," <> if sweep then "1" else "0"
+                                              <> " " <> (if largearc then "1" else "0")
+                                              <> "," <> (if sweep then "1" else "0")
                                               <> " " <> show x <> "," <> show y
 
 --  elliptical arc  (relative)
 ar :: Number -> Number -> Number -> Boolean -> Boolean -> Number -> Number -> Path -> Path
 ar rx ry xrot largearc sweep x y = appendToPath $ "a" <> show rx <> "," <> show ry
                                                <> " " <> show xrot
-                                               <> " " <> if largearc then "1" else "0"
-                                               <> "," <> if sweep then "1" else "0"
+                                               <> " " <> (if largearc then "1" else "0")
+                                               <> "," <> (if sweep then "1" else "0")
                                                <> " " <> show x <> "," <> show y
