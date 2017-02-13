@@ -15,6 +15,9 @@ line = tag "line" Nothing
 path :: forall e. Array (Prop e) -> Markup e -> Markup e
 path = tag "path" Nothing
 
+rect :: forall e. Array (Prop e) -> Markup e -> Markup e
+rect = tag "rect" Nothing
+
 svg :: forall e. Array (Prop e) -> Markup e -> Markup e
 svg = tag "svg" Nothing
 

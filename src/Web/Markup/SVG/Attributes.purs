@@ -32,6 +32,12 @@ height = Attr "height"
 r :: forall e. String -> Prop e
 r = Attr "r"
 
+rx :: forall e. String -> Prop e
+rx = Attr "rx"
+
+ry :: forall e. String -> Prop e
+ry = Attr "ry"
+
 rotate :: forall e. String -> Prop e
 rotate = Attr "rotate"
 
