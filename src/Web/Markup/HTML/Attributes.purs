@@ -38,3 +38,5 @@ checked = Attr "checked"
 draggable :: forall e. String -> Prop e
 draggable = Attr "draggable"
 
+align :: forall e. String -> Prop e
+align = Attr "align"
