@@ -76,6 +76,6 @@ markup
   :: forall e r. (Monoid r)
   => (Tag -> Maybe (Namespace) -> Array (Prop e) -> r -> r)
   -> (String -> r) -> Markup e -> r
-markup tagf textf (Markup ns) = foldMap node ns where
+markup tagf textf (Markup nds) = foldMap node nds where
   node (Tag tn ns ps cs) = tagf tn ns ps (markup tagf textf (lowerCoyoneda cs))
   node (Text str) = textf str
