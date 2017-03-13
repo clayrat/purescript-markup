@@ -29,8 +29,29 @@ fontSize = Attr "font-size"
 height :: forall e. String -> Prop e
 height = Attr "height"
 
+id_ :: forall e. String -> Prop e
+id_ = Attr "id"
+
+markerEnd :: forall e. String -> Prop e
+markerEnd = Attr "marker-end"
+
+markerHeight :: forall e. String -> Prop e
+markerHeight = Attr "markerHeight"
+
+markerWidth :: forall e. String -> Prop e
+markerWidth = Attr "markerWidth"
+
+orient :: forall e. String -> Prop e
+orient = Attr "orient"
+
 r :: forall e. String -> Prop e
 r = Attr "r"
+
+refX :: forall e. String -> Prop e
+refX = Attr "refX"
+
+refY :: forall e. String -> Prop e
+refY = Attr "refY"
 
 rx :: forall e. String -> Prop e
 rx = Attr "rx"
@@ -49,6 +70,9 @@ textAnchor = Attr "text-anchor"
 
 transform :: forall e. String -> Prop e
 transform = Attr "transform"
+
+viewBox :: forall e. String -> Prop e
+viewBox = Attr "viewBox"
 
 width :: forall e. String -> Prop e
 width = Attr "width"
