@@ -40,11 +40,11 @@ data Input = Input
 
 instance inputStringEvent :: Event String Input where
   eventName _ _ = "input"
-  eventPayload _ f = f ! "target" ! "value" >>= readString # runExcept # either (const "") id
+  eventPayload _ = either (const "") id <<< runExcept <<< (readString <=< \v -> v ! "target" ! "value")
 
 -- | A checkbox got checked or unchecked.
 data Checked = Checked
 
 instance checkedBooleanEvent :: Event Boolean Checked where
   eventName _ _ = "change"
-  eventPayload _ f = f ! "target" ! "checked" >>= readBoolean # runExcept # either (const false) id
+  eventPayload _ = either (const false) id <<< runExcept <<< (readBoolean <=< \v -> v ! "target" ! "checked")

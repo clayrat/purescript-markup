@@ -29,3 +29,6 @@ svg = tag "svg" Nothing
 
 text :: forall e. Array (Prop e) -> Markup e -> Markup e
 text = tag "text" Nothing
+
+title :: forall e. Array (Prop e) -> Markup e -> Markup e
+title = tag "title" Nothing
